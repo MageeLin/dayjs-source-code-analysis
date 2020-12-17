@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="../src/index.js" type="module"></script>
+    <!-- <script src="../src/index.js" type="module"></script> -->
   </head>
   <body>
     <script type="module">
       import dayjs from '../src/index.js';
-      import zh from '../src/locale/zh.js';
+      // import zh from '../src/locale/zh.js';
       window.dayjs = dayjs;
-      console.log(new dayjs())
+      console.log('LJY-dev ---------------------------------------------------');
+      console.log('LJY-dev ~ file: index.html ~ line 14 ~ dayjs', dayjs.prototype);
+      console.log('LJY-dev ---------------------------------------------------');
+      let instance = dayjs();
+      console.log('LJY-dev ---------------------------------------------------------');
+      console.log('LJY-dev ~ file: index.html ~ line 18 ~ instance', instance);
+      console.log('LJY-dev ---------------------------------------------------------');
+      
     </script>
   </body>
 </html>
