@@ -641,12 +641,12 @@ dayjs.prototype = proto;
 })
 
 
-// 下面的方法都是静态方法，挂在Dayjs类上
+// 下面的方法都是静态方法，挂在dayjs 函数对象上
 /**
  * @description: 挂载插件
- * @param {*} plugin 插件
+ * @param {Function} plugin 插件
  * @param {*} option 插件选项
- * @return {Dayjs Class} 返回Dayjs类
+ * @return {dayjs function} 返回 dayjs 函数对象
  */
 dayjs.extend = (plugin, option) => {
   // 同一个插件只挂载一次
