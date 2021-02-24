@@ -1,4 +1,12 @@
-export default (o, c) => { // locale needed later
+/**
+ * @description: plugin  Day.js 被设计成不可变的对象，
+ * 但是为了方便一些老项目实现对 moment.js 的替换，
+ * 可以使用🚨 BadMutable 🚨插件让 Day.js 转变成可变的对象
+ * @param {Object} o option
+ * @param {Class} c Dayjs类
+ */
+export default (o, c) => {
+  // 在本质上，就是所有的 setter 都会更新当前实例，this都是绑到了当前实例上
   const proto = c.prototype
   proto.$g = function (input, get, set) {
     if (this.$utils().u(input)) return this[get]
